@@ -13,14 +13,14 @@ const router = createRouter({
       name: 'bookmark',
       component: () => import('../views/BookmarkView.vue'),
     },
-    {
-      path: '/details/:id',
-      name: 'details',
-      component: () => import('../views/DetailsView.vue'),
-      props: (route) => ({
-        movieId: route.params.id,
-      }),
-    },
+    // {
+    //   path: '/details/:id',
+    //   name: 'details',
+    //   component: () => import('../views/DetailsView.vue'),
+    //   props: (route) => ({
+    //     movieId: route.params.id,
+    //   }),
+    // },
   ],
 })
 

@@ -1,5 +1,9 @@
 <script setup>
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import MoviePanel from './components/MoviePanel.vue'
+
+const detailsMovieId = ref(null)
 </script>
 
 <template>
@@ -32,8 +36,9 @@ import { RouterLink, RouterView } from 'vue-router'
         </RouterLink>
       </nav>
     </div>
-    <RouterView />
+    <RouterView @view-details="detailsMovieId = $event" />
   </div>
+  <MoviePanel v-if="detailsMovieId" :movie-id="detailsMovieId" @close="detailsMovieId = null" />
 </template>
 
 <style scoped>

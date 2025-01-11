@@ -47,9 +47,7 @@ onMounted(async () => {
           allowfullscreen
         ></iframe>
       </div>
-      <div v-else class="no-trailer">
-        No trailer found
-      </div>
+      <div v-else class="no-trailer">No trailer found</div>
     </template>
   </div>
 </template>

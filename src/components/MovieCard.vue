@@ -53,22 +53,13 @@ function togglebookmark() {
         @load="skeleton = false"
       />
       <div class="movie__overlay">
-        <RouterLink class="movie__overlay-details" :to="`/details/${movie.id}`">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polygon points="6 3 20 12 6 21 6 3" />
-          </svg>
-          Trailer
-        </RouterLink>
+        <button
+          type="button"
+          class="movie__overlay-details"
+          @click="$emit('view-details', movie.id)"
+        >
+          View details
+        </button>
       </div>
       <button type="button" class="movie__bookmark" @click="togglebookmark()">
         <svg

@@ -9,7 +9,12 @@ const popularMovies = useStorage('bookmarked_movies', [])
   <div class="wrapper">
     <h1 class="title">Bookmarked movies</h1>
     <div class="movies-grid">
-      <MovieCard v-for="movie in popularMovies" :key="movie.id" :movie="movie" />
+      <MovieCard
+        v-for="movie in popularMovies"
+        :key="movie.id"
+        :movie="movie"
+        @view-details="$emit('view-details', $event)"
+      />
     </div>
   </div>
 </template>
