@@ -26,6 +26,7 @@ const detailsMovieId = ref(null)
             ></path>
           </svg>
         </RouterLink>
+        <!-- test -->
         <RouterLink class="item-link" to="/bookmark">
           <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
             <path
